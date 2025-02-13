@@ -43,7 +43,7 @@
     let song = document.getElementById("song");
     let ctrlIcon = document.getElementById("ctrlIcon");
 
-    // Ensure the progress bar gets the correct max value
+   
     song.onloadedmetadata = function() {
         progress.max = song.duration;
         progress.value = song.currentTime;
@@ -61,12 +61,12 @@
         }
     }
 
-    // Update progress bar while song is playing
+    
     song.ontimeupdate = function () {
         progress.value = song.currentTime;
     };
 
-    // Seek functionality when changing progress bar
+  
     progress.oninput = function() {
         song.currentTime = progress.value;
         if (song.paused) {
