@@ -1,0 +1,166 @@
+/* Importing a Classy Serif Font */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Cormorant Garamond', serif; /* Classy & Elegant */
+    box-sizing: border-box;
+}
+
+/* Background: Solid Navy Blue */
+.container {
+    width: 100%;
+    height: 100vh;
+    background: navy;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+/* Overlay for a Dreamy Effect */
+.container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay for readability */
+}
+
+/* Music Player Card */
+.music-player {
+    background: rgba(47, 25, 113, 0.9); /* Semi-transparent glass effect */
+    width: 420px;
+    padding: 30px 40px;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px); /* Soft blur effect */
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    position: relative;
+    z-index: 1;
+}
+
+/* Navigation Icons (Back & Menu) */
+nav {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+
+nav .circle {
+    border-radius: 50%;
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ffdd1a; /* Golden glow */
+    color: #1a0754;
+    box-shadow: 0 5px 15px rgba(255, 221, 26, 0.4);
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+nav .circle:hover {
+    background: #ffd500;
+    box-shadow: 0 8px 20px rgba(255, 221, 26, 0.6);
+    transform: scale(1.1);
+}
+
+/* Album Art */
+.song-img {
+    width: 230px;
+    border-radius: 50%;
+    border: 8px solid #fff;
+    box-shadow: 0 10px 60px rgba(255, 221, 26, 0.3);
+}
+
+/* Song Title */
+.music-player h1 {
+    font-size: 28px;
+    font-weight: 600;
+    color: #ffdd1a; /* Golden text */
+    margin-top: 18px;
+}
+
+/* Artist Name */
+.music-player p {
+    font-size: 18px;
+    color: #fff;
+    opacity: 0.8;
+}
+
+/* Progress Bar */
+#progress {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 8px;
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 35px 0;
+}
+
+/* Progress Bar Thumb */
+#progress::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    background: #ffdd1a;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    border: 4px solid #8267d4;
+    box-shadow: 0 4px 10px rgba(255, 221, 26, 0.5);
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+#progress::-webkit-slider-thumb:hover {
+    transform: scale(1.2);
+}
+
+/* Controls Section */
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px; /* Adds space between buttons */
+    margin-top: 20px;
+}
+
+/* Button Styling (Forward, Backward) */
+.controls div {
+    width: 60px;
+    height: 60px;
+    background: #8267d4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: #ffdd1a;
+    box-shadow: 0 10px 25px rgba(255, 221, 26, 0.3);
+    cursor: pointer;
+    font-size: 22px;
+    transition: 0.3s ease-in-out;
+}
+
+/* Adjusted Play/Pause Button - Made Smaller */
+.controls div:nth-child(2) {
+    transform: scale(1.3); /* Reduced size */
+    background: #ffdd1a;
+    color: #1a0754;
+    width: 55px; /* Smaller */
+    height: 55px; /* Smaller */
+}
+
+/* Hover Effects */
+.controls div:hover {
+    transform: scale(1.15);
+    background: #ffea00;
+    box-shadow: 0 15px 30px rgba(255, 221, 26, 0.4);
+}
+
